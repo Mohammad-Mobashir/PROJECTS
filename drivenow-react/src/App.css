@@ -135,3 +135,67 @@ footer p { color: #9ca3af; margin-top: 8px; }
   .section-title h2 { font-size: 29px; }
   .container { width: 92%; }
 }
+
+/* Multi-page navigation and dashboard additions */
+.site-nav { gap: 18px; }
+.site-nav .logo, .nav-links button, .module-links button { border: 0; background: transparent; cursor: pointer; font: inherit; }
+.site-nav .logo { font-size: 25px; }
+.nav-links, .module-links { display: flex; align-items: center; gap: 22px; }
+.nav-links button, .module-links button { color: white; font-size: 14px; padding: 10px 0; }
+.nav-links button:hover, .module-links button:hover, .nav-links .nav-active, .module-links .nav-active { color: #38bdf8; }
+.module-links { border-left: 1px solid #475569; padding-left: 18px; }
+.page-container { min-height: 62vh; padding-top: 25px; }
+.eyebrow { color: #7dd3fc; letter-spacing: 3px; font-size: 12px; font-weight: 700; }
+.benefit-grid, .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.benefit-grid article, .stats-grid > div { background: white; border-radius: 13px; padding: 25px; box-shadow: 0 5px 20px rgba(0,0,0,.06); }
+.benefit-grid article > span { color: #0284c7; font-weight: 800; }
+.benefit-grid h3 { margin: 12px 0 8px; }
+.benefit-grid p, .contact-info p { color: #64748b; line-height: 1.65; }
+.center-action { text-align: center; margin-top: 30px; }
+.primary-btn { border: 0; border-radius: 8px; padding: 13px 22px; color: white; background: #0284c7; cursor: pointer; font-weight: 700; }
+.primary-btn:hover { background: #0369a1; }
+.text-btn { border: 0; background: transparent; color: #0284c7; padding: 12px 0 0; cursor: pointer; font-weight: 700; }
+.contact-layout { display: grid; grid-template-columns: .85fr 1.15fr; gap: 30px; background: white; padding: 32px; border-radius: 15px; box-shadow: 0 5px 25px rgba(0,0,0,.07); }
+.contact-info h3 { font-size: 25px; margin-bottom: 15px; }
+.contact-info p { margin: 18px 0; }
+.contact-form { min-width: 0; }
+.contact-form textarea { resize: vertical; width: 100%; padding: 13px; border: 1px solid #d1d5db; border-radius: 7px; font: inherit; }
+.success-message { color: #15803d; font-weight: 600; }
+.dashboard-panel { background: white; padding: 28px; border-radius: 14px; box-shadow: 0 5px 25px rgba(0,0,0,.07); }
+.dashboard-panel h3 { margin-bottom: 18px; font-size: 22px; }
+.user-lookup { max-width: 430px; margin-bottom: 28px; }
+.empty-state { color: #64748b; background: #f8fafc; padding: 22px; border-radius: 9px; }
+.admin-warning { background: #fff7ed; border: 1px solid #fed7aa; color: #9a3412; padding: 13px 16px; border-radius: 8px; margin-bottom: 20px; }
+.stats-grid { grid-template-columns: repeat(4, 1fr); margin-bottom: 25px; }
+.stats-grid > div { display: flex; flex-direction: column; gap: 10px; }
+.stats-grid span { color: #64748b; font-size: 13px; }
+.stats-grid strong { font-size: 25px; color: #0f172a; }
+.admin-bookings { display: flex; flex-direction: column; gap: 13px; }
+.admin-booking { display: flex; justify-content: space-between; gap: 20px; padding: 18px; border: 1px solid #e2e8f0; border-radius: 10px; }
+.admin-booking p { color: #64748b; margin: 6px 0; font-size: 13px; }
+.admin-actions { display: flex; align-items: center; gap: 9px; flex-wrap: wrap; justify-content: flex-end; }
+.admin-actions select { padding: 8px; border: 1px solid #cbd5e1; border-radius: 6px; }
+.delete-btn { border: 0; border-radius: 6px; background: #fee2e2; color: #b91c1c; padding: 9px 12px; cursor: pointer; }
+.status { display: inline-block; padding: 5px 9px; border-radius: 20px; font-size: 12px; font-weight: 700; background: #e2e8f0; color: #334155; white-space: nowrap; }
+.status.confirmed { background: #dcfce7; color: #166534; }
+.status.cancelled { background: #fee2e2; color: #991b1b; }
+.status.pending { background: #fef3c7; color: #92400e; }
+.table-wrap { overflow-x: auto; }
+.booking-table { width: 100%; border-collapse: collapse; min-width: 620px; }
+.booking-table th, .booking-table td { padding: 13px; border-bottom: 1px solid #e2e8f0; text-align: left; font-size: 14px; }
+.booking-table th { background: #f8fafc; color: #475569; }
+@media (max-width: 850px) {
+  .site-nav { height: auto; min-height: 70px; flex-wrap: wrap; padding: 12px 5%; }
+  .nav-links { order: 3; width: 100%; justify-content: center; gap: 18px; }
+  .module-links { margin-left: auto; }
+  .contact-layout { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .nav-links { gap: 12px; }
+  .nav-links button, .module-links button { font-size: 13px; }
+  .benefit-grid, .stats-grid { grid-template-columns: 1fr; }
+  .admin-booking { flex-direction: column; }
+  .admin-actions { justify-content: flex-start; }
+  .contact-layout, .dashboard-panel { padding: 20px; }
+}
